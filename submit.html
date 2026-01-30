@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload JSON to n8n</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f7f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 320px;
+      text-align: center;
+    }
+    input[type="file"] {
+      margin: 15px 0;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #1e4fd8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h3>Upload JSON File</h3>
+
+    <form 
+      action="https://drucilla-vaporish-fixatedly.ngrok-free.dev/webhook/e7bcc39d-beef-4187-9711-abea12a8a248"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input 
+        type="file" 
+        name="file" 
+        accept=".json"
+        required
+      />
+
+      <br>
+
+      <button type="submit">Send to n8n</button>
+    </form>
+  </div>
+
+</body>
+</html>
